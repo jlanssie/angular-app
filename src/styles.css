@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+html, body {
+  background: linear-gradient(90deg, oklch(63.32% .24 31.68) 0%, oklch(69.02% .277 332.77) 50%, oklch(53.18% .28 296.97) 100%);
+}
