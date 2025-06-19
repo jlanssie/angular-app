@@ -1,12 +1,13 @@
 <header class="p-4 bg-white">
   <nav class="flex items-center space-x-4">
-    <a
-      *ngFor="let link of navLinks"
-      [routerLink]="link.path"
-      [href]="link.path"
-      class="text-black text-lg font-semibold"
-    >
-      {{ link.label }}
-    </a>
+    @for (link of navLinks; track link.path) {
+      <a
+        [routerLink]="link.path"
+        [href]="link.path"
+        class="text-black text-lg font-semibold"
+      >
+        {{ link.label }}
+      </a>
+    }
   </nav>
 </header>
