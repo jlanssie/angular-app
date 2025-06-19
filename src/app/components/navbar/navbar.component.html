@@ -1,6 +1,12 @@
 <header class="p-4 bg-white">
   <nav class="flex items-center space-x-4">
-    <a href="/" routerLink="/" class="text-black text-lg font-semibold">Home</a>
-    <a href="/test" routerLink="/test" class="text-black text-lg font-semibold">Test</a>
+    <a
+      *ngFor="let link of navLinks"
+      [routerLink]="link.path"
+      [href]="link.path"
+      class="text-black text-lg font-semibold"
+    >
+      {{ link.label }}
+    </a>
   </nav>
 </header>
